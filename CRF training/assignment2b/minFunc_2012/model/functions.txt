@@ -1,0 +1,38 @@
+Here are some suggested function signatures.  The goal is to help you
+modularize functionality that can be reused in different places in your
+assignment.  However, they are not mandatory, and not specified very precisely
+anyway.  Please ask if you have any questions.  Feel free to define your own
+functions and data structures as you wish.  The "..." in an argument list
+indicates extra parameters (or you may want none at all).
+
+These are geared for Python/NumPy, though you could do something similar for
+Matlab or Julia or R
+
+energy (x, y, params, ...): 
+# Compute energy defined in question 1.2
+# inputs: input x, label sequence y, params
+# output: energy (a number)
+
+potential (x, params, t, ...):
+# Absorb node potential into a pairwise potential,
+# for positions (t, t+1).
+# output: (log) pairwise potential function.  (a table, e.g. array)
+
+message_passing (psi, ...):
+# Message passing algorithm
+# input: (log-) potential
+# outputs: forward/backward messages
+
+marginals (x, params, ...):
+# outputs: singleton/node marginal probabilities, (pairwise marginals probabilities), log partition function value.  (python tutorials will tell you to return a tuple. you could do that. or a dict might be easy to work with too.)
+# major steps this function will need to take:
+# (1) compute (log) potential
+# (2) run message passing
+# (3) compute logZ and beliefs
+# (4) compute marginal probabilities
+
+predict (x, params, ...)
+# Predict the label sequence of x
+# output: a label sequence (e.g. an array)
+
+
