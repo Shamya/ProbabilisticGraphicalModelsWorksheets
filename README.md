@@ -1,2 +1,2 @@
 # ProbabilisticGraphicalModels
-Few example implementation from Probabilistic Graphical Models
+Few example implementation of Probabilistic Graphical Models
